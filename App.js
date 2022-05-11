@@ -1,20 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Image, Text } from 'react-native';
+// import ImageRover from './components/ImageRover';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // <ImageRover/>
+      <View style = {styles.imgContainer}>
+        <Image style = {styles.roverImg} source={require('./assets/rover.jpg')}></Image>
+        <Text style = {styles.roverText}>Le rover Opportunity</Text>
+      </View> 
   );
 }
 
 const styles = StyleSheet.create({
+
   container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  roverImg:{
+    width : 300,
+    height : 300,
+},
+  
+imgContainer:{
+    flexDirection : "row",
+},
+
+roverText:{
+  flex : 3,
+  marginLeft : 10,
+  alignSelf : "center",
+}
+
 });
